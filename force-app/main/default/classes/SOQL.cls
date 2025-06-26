@@ -453,7 +453,8 @@ public with sharing class SOQL {
 				newLineItems.add(new OpportunityLineItem(
 					OpportunityId = cloneOppId,
 					Quantity = lineItem.Quantity * randomQuantity,
-					UnitPrice = lineItem.UnitPrice
+					UnitPrice = lineItem.UnitPrice,
+					PricebookEntryId = lineItem.PricebookEntryId
 				));
 				}
 			}
