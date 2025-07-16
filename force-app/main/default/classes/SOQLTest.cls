@@ -27,7 +27,7 @@ public with sharing class SOQLTest {
 		insert new List<Lead>{ testLead1, testLead2 };
 
 		// Call the method to test
-		List<Lead> leads = SOQL.GetAllLeads(); // Call the method from SOQL class
+		List<Lead> leads = SOQL.getAllLeads(); // Call the method from SOQL class
 
 		// Assert that the number of leads returned is correct
 		System.assertEquals(2, leads.size(), 'Number of leads returned is incorrect.');
@@ -55,7 +55,7 @@ public with sharing class SOQLTest {
 		insert new List<Contact>{ testContact1, testContact2, testContact3 };
 
 		// Call the method to test
-		List<Contact> contacts = SOQL.GetContactsByFirstName('John'); // Call the method from SOQL class
+		List<Contact> contacts = SOQL.getContactsByFirstName('John'); // Call the method from SOQL class
 
 		// Assert that the number of contacts returned is correct
 		System.assertEquals(2, contacts.size(), 'Number of contacts returned is incorrect.');
@@ -80,7 +80,7 @@ public with sharing class SOQLTest {
 		insert new List<Contact>{ testContact1, testContact2, testContact3 };
 
 		// Call the method to test
-		List<Id> contactIds = SOQL.GetContactIdsByLastName(null); //Replace null with your method call from SOQL class
+		List<Id> contactIds = SOQL.getContactIdsByLastName(null); //Replace null with your method call from SOQL class
 
 		// Assert that the number of contact IDs returned is correct
 		System.assertEquals(2, contactIds.size(), 'Number of contact IDs returned is incorrect.');
@@ -120,7 +120,7 @@ public with sharing class SOQLTest {
 		insert new List<Opportunity>{ testOpportunity1, testOpportunity2, testOpportunity3 };
 
 		// Call the method to test
-		List<Opportunity> opportunities = SOQL.GetClosedWonOppsByAccount(testAccount.Id); //Replace null with your method passing in testAccount.Id
+		List<Opportunity> opportunities = SOQL.getClosedWonOppsByAccount(testAccount.Id); //Replace null with your method passing in testAccount.Id
 
 		// Assert that the number of opportunities returned is correct
 		System.assertEquals(2, opportunities.size(), 'Number of opportunities returned is incorrect.');
